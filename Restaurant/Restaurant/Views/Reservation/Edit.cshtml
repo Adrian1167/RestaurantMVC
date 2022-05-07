@@ -1,0 +1,24 @@
+﻿@model Reservation
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<form method="post" asp-action="Edit">
+    <div class="vorder p-3 mt-4">
+         <div class="mb-3">
+            <label asp-for="Date"></label>
+            <input asp-for="Date" class="form-control" />
+            <span asp-validation-for="Date" class="text-danger"></span>
+        </div>
+         <div class="mb-3">
+            <label asp-for="NOofPersons"></label>
+            <input asp-for="NOofPersons" class="form-control" />
+            <span asp-validation-for="NOofPersons" class="text-danger" ></span>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary" style="width:150px">Update</button>
+        <a asp-controller="Reservation" asp-action="Index" class="btn btn-secondary" style="width:150px">Back to list</a>
+    </div>
+</form>
+
